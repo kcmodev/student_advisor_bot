@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+
+  <category>
+    <pattern>*</pattern>
+    <template>I don't have an answer for that.</template>
+  </category>
+  
+  <category>
+      <pattern>HELLO ^</pattern>
+        <template>
+            <think><set name="looped"><star/></set></think>
+            <condition name="looped">
+                <li value="again">No worries! Let's try it again.<br/><br/></li>
+                <li>Hello! This is your new student advisor! Looking forward to helping you today :) I am here to help you decide
+                 on a good career path. <br/><br/>
+                Let's start with a few basic questions. <br/><br/></li>
+            </condition>
+          <srai>QUESTION ONE</srai>
+        </template>
+        
+  </category>
+  
+  <category>
+      <pattern>MY NAME IS *</pattern>
+        <template>
+            Got it, thanks <set name="firstname"><star/></set>.
+        </template>
+  </category>
+  
+  <category>
+      <pattern>HI ^</pattern>
+      <template><srai>HELLO</srai></template>
+  </category>
+  
+  <category>
+      <pattern>HEY ^</pattern>
+      <template><srai>HELLO</srai></template>
+  </category>
+  
+  <category>
+      <pattern>DETERMINE RESULTS</pattern>
+      <template>
+          Here are a few possible career options for you:<br/>
+          <srai>CAREER OPTIONS</srai>
+      </template>
+  </category>
+  
+</aiml>

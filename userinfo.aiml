@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+	
+	<category>
+	    <pattern>I * MATH</pattern>
+	    <template>
+	        <think>
+	            <set name="math_affinity"><lowercase><star/></lowercase></set>
+	        </think>
+	        <formal><get name="math_affinity"></get></formal>s
+	        <lowercase> math, got it. </lowercase>
+	        <srai>QUESTION TWO</srai>
+	    </template>
+    </category>
+    
+    <category>
+        <pattern>I AM A *</pattern>
+        <template>
+            <think>
+                <set name="leadership"><lowercase><star/></lowercase></set>
+            </think>
+            Have you marked down as a <lowercase><get name="leadership"></get> as well. </lowercase> 
+            <srai>QUESTION THREE</srai>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>* CHALLENGES</pattern>
+        <template>
+            <think>
+                <set name="challenge_preference"><star/></set>
+            </think>
+             Ok, so you prefer <lowercase><get name="challenge_preference"></get> challenges. </lowercase>
+             <srai>QUESTION FOUR</srai>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>MAKE ME *</pattern>
+        <template>
+            <think>
+                <set name="security_comfort_level"><star/></set>
+            </think>
+            <formal><get name="security_comfort_level"></get></formal><lowercase>, got it. </lowercase>
+            <srai>QUESTION FIVE</srai>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>I PREFER *</pattern>
+        <template>
+            <think>
+                <set name="job_stability_requirement"><star/></set>
+            </think>
+            Ok, so you are focused on <lowercase><get name="job_stability_requirement"></get>.</lowercase><br/><br/>
+            <srai>CONTINUE OR TERMINATE</srai>
+        </template>
+    </category>
+    
+	<category>
+	    <pattern>CAREER OPTIONS</pattern>
+	    <template>
+	        <condition name="math_affinity">
+	            <li value="Love">
+	                <br/>A great potential career choice for you could be a Data Scientist. Data Scientists work with massive data sets and very powerful computers to 
+	                correlate data points that a human might not be able to. Such as the likelihood of someone buying a particular brand
+	                 of soft drink depending on the weather. Very interesting stuff that is desired by lots of large employers. Bonus points for giving that math
+	                 brain of yours a workout! :)<br/>
+	                <button>
+	                    <text>Data Scientist</text>
+	                    <url>https://www.bls.gov/oes/current/oes152098.htm</url>
+                    </button>
+	            </li>
+	        </condition>
+	        
+	        <condition name="leadership">
+	            <li value="leader">
+	                <br/>A great potential career choice for you could be in IT Management. Every team needs a leader. If you have the natural ability 
+	                and are willing then this is a great choice. You are the interface between upper management and employees, you get the chance
+	                 to develop careers and help people achieve their career aspirations through the allocation of resources to projects.<br/>
+	                <button>
+	                    <text>IT Manager</text>
+	                    <url>https://www.bls.gov/ooh/management/computer-and-information-systems-managers.htm</url>
+                    </button>
+	            </li>
+	        </condition>
+	        
+	        <condition name="challenge_preference">
+	            <li value="tangible">
+	                <br/>A great potential career choice for you could be in Network Engineering. If you like working behind the scenes and 
+	                with your hands Network Engineering is a great option. Running cables, setting up servers and managing load balancers are
+	                 just a few of the responsibilities you will have.<br/>
+	                <button>
+	                    <text>Network Engineer</text>
+	                    <url>https://www.bls.gov/ooh/computer-and-information-technology/network-and-computer-systems-administrators.htm</url>
+                    </button>
+	            </li>
+	        </condition>
+	        
+	        <condition name="security_comfort_level">
+	            <li value="excite">
+	                <br/>A great potential career choice for you could be in Cybersecurity. Learning to think like a hacker, hacking large organizations 
+	                (with their permission of course) and reverse engineering malicous software are just a few things you could be asked to do in this career field. 
+	                Cybersecurity is in high demand with a short supply of capable people.<br/>
+	                <button>
+	                    <text>Cybersecurity Analyst</text>
+	                    <url>https://www.bls.gov/ooh/computer-and-information-technology/information-security-analysts.htm</url>
+                    </button>
+	            </li>
+	        </condition>
+	        
+	        <condition name="job_stability_requirement">
+	            <li value="freedom">
+	                <br/>A great potential career choice for you could be in Web Development. This career choice is a great fit for anyone who
+	                would prefer to not be tied to any one company, make their own schedule and work from anywhere they choose. All you need
+	                to be productive is your laptop and a place to work!<br/>
+	                <button>
+	                    <text>Web Developer</text>
+	                    <url>https://www.bls.gov/ooh/computer-and-information-technology/web-developers.htm</url>
+                    </button>
+	            </li>
+	            <li value="stability">
+	                <br/>A great potential career choice for you could be in Software Engineering. Software Engineering has several benefits. 
+	                Chief among them being a stable, and higher than average, income. Software Engineers are needed in almost every field by 
+	                nearly every company in some capacity.<br/>
+	                <button>
+	                    <text>Software Developer</text>
+	                    <url>https://www.bls.gov/ooh/computer-and-information-technology/software-developers.htm</url>
+                    </button>
+	            </li>
+	        </condition>
+	        <br/> Click one of the following choices for more information on the career that interests you. Have a good day! :)
+	        <button>
+	            <text>Start Over</text>
+	            <postback>HELLO AGAIN</postback>
+            </button>
+	    </template>
+    </category>
+	
+</aiml>

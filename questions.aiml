@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+	
+	<category>
+	    <pattern>QUESTION ONE</pattern>
+	    <template>How do you feel about math?
+    	    <reply>
+    	        <text>Love math</text>
+    	        <postback>I love math</postback>
+            </reply>
+            <reply>
+                <text>Hate math</text>
+                <postback>I hate math</postback>
+            </reply>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>QUESTION TWO</pattern>
+        <template>
+            Next question... <br/><br/>
+            Would you consider yourself a leader or a follower?
+            <reply>
+                <text>Leader</text>
+                <postback>I am a leader</postback>
+            </reply>
+            <reply>
+                <text>Follower</text>
+                <postback>I am a follower</postback>
+            </reply>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>QUESTION THREE</pattern>
+        <template>
+            Next question... <br/><br/>
+            Would you prefer tangible challenges, or work with abstract concepts
+            requiring a lot of thought?
+            <reply>
+                <text>Tangible</text>
+                <postback>Tangible challenges</postback>
+            </reply>
+            <reply>
+                <text>Abstract</text>
+                <postback>Abstract challenges</postback>
+            </reply>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>QUESTION FOUR</pattern>
+        <template>
+            Next... <br/><br/>
+            Would legally breaking the law make you nervous or excite you?
+            <reply>
+                <text>Nervous</text>
+                <postback>Make me nervous</postback>
+            </reply>
+            <reply>
+                <text>Excite</text>
+                <postback>Make me exite</postback>
+            </reply>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>QUESTION FIVE</pattern>
+        <template>
+            Finally... Would you enjoy the ability to set your own schedule at the cost of stability? 
+            Freelancing vs working for an established company for example.
+            <reply>
+                <text>Freedom</text>
+                <postback>I prefer freedom</postback>
+            </reply>
+            <reply>
+                <text>Stability</text>
+                <postback>I prefer stability</postback>
+            </reply>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>CONTINUE OR TERMINATE</pattern>
+        <template>
+            Well that was it! Would you like to see your results based on these answers?
+            <reply>
+                <text>Yes</text>
+                <postback>Determine results</postback>
+            </reply>
+            <reply>
+                <text>No, Start Over</text>
+                <postback>Hello again</postback>
+            </reply>
+        </template>
+    </category>
+    
+</aiml>
