@@ -136,5 +136,13 @@
             </button>
 	    </template>
     </category>
+    
+    <category>
+      <pattern>DETERMINE RESULTS</pattern>
+      <template>
+          Here are a few possible career options for you:<br/>
+          <srai>CAREER OPTIONS</srai>
+      </template>
+  </category>
 	
 </aiml>

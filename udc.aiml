@@ -3,7 +3,10 @@
 
   <category>
     <pattern>*</pattern>
-    <template>I don't have an answer for that.</template>
+    <template>
+        I don't have an answer for that.<br/><br/>
+        <srai>HELLO AGAIN</srai>
+    </template>
   </category>
   
   <category>
@@ -36,14 +39,6 @@
   <category>
       <pattern>HEY ^</pattern>
       <template><srai>HELLO</srai></template>
-  </category>
-  
-  <category>
-      <pattern>DETERMINE RESULTS</pattern>
-      <template>
-          Here are a few possible career options for you:<br/>
-          <srai>CAREER OPTIONS</srai>
-      </template>
   </category>
   
 </aiml>
